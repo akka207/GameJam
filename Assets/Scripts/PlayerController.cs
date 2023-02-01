@@ -56,21 +56,21 @@ public class PlayerController : MonoBehaviour
         //}
     }
 
-    private void Update()
+/*    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space) && canInit && currentPlatform)
         {
             Instantiate(platform, aimPlatform.transform.position, new Quaternion(0, 0, 0, 0));
         }
-    }
+    }*/
 
-    void OnCollisionEnter(Collision collision)
+/*    void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Platform")
         {
             currentPlatform = collision.gameObject;
         }
-    }
+    }*/
 
     //Vector3 HexGridPos(Vector3 position)
     //{
