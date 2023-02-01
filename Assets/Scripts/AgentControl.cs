@@ -1,18 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class AgentControl : MonoBehaviour
 {
-    private Camera _camera;
     private NavMeshAgent _agent;
+    private Camera _camera;
     private RaycastHit tempHit;
     void Start()
     {
         _camera = Camera.main;
         _agent = GetComponent<NavMeshAgent>();
     }
+
 
     void Update()
     {

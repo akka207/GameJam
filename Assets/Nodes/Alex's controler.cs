@@ -1,76 +1,54 @@
-using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class Alexscontroler : MonoBehaviour
 {
-    public float speed = 5f;
-    public float rotateSpeed = 5f;
-    public GameObject platform;
-    public GameObject aimPlatform;
-    public float gridSize = 3f;
-    public float distToInit = 2f;
-    public List<int[]> grid;
-    Rigidbody rb;
-    public GameObject currentPlatform;
-    bool canInit = true;
 
-    private void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-    }
+    /*
+     using UnityEngine;
 
-    private void FixedUpdate()
-    {
-        Vector3 moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        rb.velocity = new Vector3(moveDir.x, 0, moveDir.z) * speed;
-        if (moveDir != Vector3.zero)
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(moveDir), rotateSpeed * Time.deltaTime);
-        rb.AddForce(Physics.gravity * 10f, ForceMode.Acceleration);
-        
-        
-        
-        //if (currentPlatform && Vector3.Distance(transform.position, currentPlatform.transform.position) > distToInit)
-        //if (true)
-        //{
-        //    aimPlatform.SetActive(true);
-        //    //Vector3 spawnPos = (transform.position - currentPlatform.transform.position) + transform.position;
-        //    //aimPlatform.transform.position = flat_hex_to_pixel(pixel_to_flat_hex(transform.position));
-        //    //Debug.DrawLine(currentPlatform.transform.position, spawnPos);
-        //    if (aimPlatform.GetComponent<AimPlatform>().col)
-        //    {
-        //        if (aimPlatform.GetComponent<AimPlatform>().col.tag == "Platform")
-        //            canInit = false;
-        //        else
-        //            canInit = true;
-        //    }
-        //    else
-        //    {
-        //        canInit = true;
-        //    }
-        //}
-        //else
-        //{
-        //    canInit = false;
-        //    aimPlatform.SetActive(false);
-        //}
-    }
 
-    private void Update()
+    public class PlayerController : MonoBehaviour
     {
-        if (Input.GetKeyDown(KeyCode.Space) && canInit && currentPlatform)
+        public float speed = 5f;
+        public float rotateSpeed = 5f;
+        Rigidbody rb;
+
+        private void Start()
         {
-            Instantiate(platform, aimPlatform.transform.position, new Quaternion(0, 0, 0, 0));
+            rb = GetComponent<Rigidbody>();
         }
-    }
 
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Platform")
+        private void FixedUpdate()
         {
-            currentPlatform = collision.gameObject;
+            Vector3 moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            rb.velocity = new Vector3(moveDir.x, 0, moveDir.z) * speed;
+            if (moveDir != Vector3.zero)
+                transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(moveDir), rotateSpeed * Time.deltaTime);
+            rb.AddForce(Physics.gravity * 10f, ForceMode.Acceleration);
         }
+
+    /*    private void Update()
+        {
+    <<<<<<< HEAD
+            if (Input.GetKeyDown(KeyCode.Space) && canInit && currentPlatform)
+            {
+                Instantiate(platform, aimPlatform.transform.position, new Quaternion(0, 0, 0, 0));
+            }
+        }
+
+        
     }
+ 3a546d600a5739dbbf92b874e36e0dd04d600951
+        void OnCollisionEnter(Collision collision)
+        {
+    <<<<<<< HEAD
+            if (collision.gameObject.tag == "Platform")
+            {
+                currentPlatform = collision.gameObject;
+            }
+        }
 
     //Vector3 HexGridPos(Vector3 position)
     //{
@@ -148,5 +126,10 @@ public class PlayerController : MonoBehaviour
 
     //    return new Vector3(q, r, s);
     //}
-}
 
+        
+    }
+ 3a546d600a5739dbbf92b874e36e0dd04d600951
+}
+*/
+}
